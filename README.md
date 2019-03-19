@@ -1,13 +1,31 @@
 # HydraMqtt
+
 Mqtt Android Client
+        
+         /*
+         * Connecting
+         * */
+        val hydraMqtt = HydraMqtt.getInstance().connect(applicationcontext, "URL")
 
-   hydraMqtt!!.connect(applicationcontext, "URL")
+        /*
+         * Subscribe data
+         */
+        socket.subscribe(dataToPush)
+        
+        /*
+         * unSubscribe data
+         */
+        socket.subscribe(dataToPush)
 
-  hydraMqtt!!.onMessage(IMessageCallback {
-            Log.e(TAG, "Incoming message from : $it")
-        }).onOpen(IClientOpenCallback {
+        /*
+         * Getting Callbacks
+         */
+         
+        hydraMqtt!.onMessage(IMessageCallback {
+            Log.e(TAG, "message : " + it)
+        }).onOpen(ISocketOpenCallback {
             Log.e(TAG, "open")
-        }).onClose(IClientCloseCallback {
+        }).onClose(ISocketCloseCallback {
             Log.e(TAG, "close")
         }).onError(IErrorCallback {
             Log.e(TAG, "error")
