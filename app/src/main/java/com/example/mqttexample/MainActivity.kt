@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         private val TAG: String = MainActivity::class.java.name
     }
 
-    private val utils = Utils.getInstance()
+   // private val utils = Utils.getInstance()
     private var hydraMqtt = HydraMqtt.getInstance()
 
 
