@@ -15,7 +15,7 @@ Mqtt Android Client
         /*
          * unSubscribe data
          */
-        socket.subscribe(dataToPush)
+        socket.unSubscribe(dataToPush)
 
         /*
          * Getting Callbacks
